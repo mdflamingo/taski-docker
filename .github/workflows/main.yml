@@ -90,7 +90,6 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/taski_backend:latest
     frontend_tests:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up nodeJS
@@ -151,4 +150,3 @@ jobs:
           push: true
           # Тут вместо username должен быть ваш логин на Docker Hub
           tags: ${{ secrets.DOCKER_USERNAME }}/taski_gateway:latest
-          
