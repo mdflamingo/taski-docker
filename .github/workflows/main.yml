@@ -90,7 +90,6 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/taski_backend:latest
   frontend_tests:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up nodeJS
@@ -130,7 +129,7 @@ jobs:
         with:
           context: ./frontend/
           push: true
-          tags: username/taski_frontend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/taski_frontend:latest
   build_gateway_and_push_to_docker_hub:
     name: Push gateway Docker image to DockerHub
     runs-on: ubuntu-latest
